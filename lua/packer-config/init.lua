@@ -3,6 +3,22 @@ return require('packer').startup(function()
     use 'kyazdani42/nvim-web-devicons'
     use "EdenEast/nightfox.nvim"
     use 'kyazdani42/nvim-tree.lua'
+    use 'rcarriga/nvim-notify'
+    use 'nvim-lualine/lualine.nvim'
+    use 'romgrk/barbar.nvim'
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+    use 'nvim-treesitter/nvim-treesitter-refactor'
+    use 'windwp/nvim-ts-autotag'
+    use 'p00f/nvim-ts-rainbow'
+    use 'jiangmiao/auto-pairs'
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        -- or                            , branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
